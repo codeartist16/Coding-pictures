@@ -1,0 +1,114 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <style type="text/css">
+    * {
+    	box-sizing: border-box;
+    	}
+    html, body {
+    	margin: 0;
+    	padding: 0;
+    	}
+    .container {
+    	margin: 20px;
+    	}
+    label {
+    	text-align: center;
+    	height: 45px;
+    	display: block;
+    	padding: 15px;
+    	padding-bottom: 35px;
+    	padding-top: 10px;
+    	background: radial-gradient(white 10%, grey 70%, #404040);
+    	border-bottom: 5px solid #4d4d4d;
+    	border-radius: 50px;
+    	font-size: 25px;
+    	font-weight: bolder;
+    	font-family: "serif";
+    	}
+    form {
+    	text-align: center;
+    	background: white;
+    	}
+    form input {
+    	border: none;
+    	outline: none;
+    	padding: 10px;
+    	border-bottom: 1px solid;
+    	border-width: 100%;
+    	margin: 10px;
+    	font-variant: small-caps;
+    	}
+    input[type="submit"] {
+    	border: none;
+    	padding-left: 90px;
+    	padding-right: 90px;
+    	background: linear-gradient(lightgrey, silver, #404040);
+    	font-weight: 1000;
+    	margin-top: 15px;
+    	
+    	}
+    .login-content {
+    	border-left: .5px inset lightgrey;
+    	border-right: .5px inset grey;
+    	background: white;
+    	width: 280px;
+    	margin-left: 21px;
+    	box-shadow: 5px 2px 3px rgba(0,0,0,.3);
+    	overflow: hidden;
+    	transition-duration: 2s;
+    	max-height:0;
+    	}
+    input[type="checkbox"] {
+    	display: none;
+    	}
+    
+    a {
+    	text-decoration: none;
+    	color: #999;
+    	}
+    svg {
+    	background: white;
+    	height: 50px;
+    	width: 350px;
+    	margin-top: -2px;
+    	margin-left: -16px;
+    	}
+    input:checked ~ .login-content {
+    	max-height: 500px;
+    	}	
+  </style>
+</head>
+<body style="background: #ffe">
+   <div class="container">
+     <input type="checkbox" name="scroll" id="scroll" />
+     <label for="scroll">Log In </label>
+     <div class="login-content">
+       <form>
+         <input type="text" name="email or username" placeholder="Email Or Username"/><br />
+         <input type="password" name="password" placeholder="Password"/><br />
+         <input type="submit" value="Log In"/><br />
+         <a href="#forgot-password">Forgot password?</a>
+         <p>Don&#39;t have an account? <a href="#sign-up">Sign Up</a></p>
+       </form>
+     </div>
+     <svg>
+       <defs>
+         <radialGradient id="balls" x1="0%" y1="0%" x2="100%" y2="0%">
+           <stop offset="10%" style="stop-color:white;"/>
+           <stop offset="100%" style="stop-color: grey;"/>
+           <stop style="stop-color: #ffe;"/>
+         </radialGradient>
+       </defs>
+        <path d="M 0 20,350 20, 350 50,0 50" fill="#ffe"/>
+        <path d="M 20 13,330 13,330 37,20 37" fill="url(#balls)" />
+        <circle cx="24" cy="25" r="25" fill="url(#balls)"/>
+        <circle cx="326" cy="25" r="25" fill="url(#balls)"/>
+        <ellipse cx="52" cy="25" rx="5" ry="7" fill="#8c8c8c" />
+        <ellipse cx="298" cy="25" rx="5" ry="7" fill="#8c8c8c"/>
+        <ellipse cx="3" cy="26" rx="5" ry="7" stroke="lightgrey" stroke-width=".5"/>
+        <ellipse cx="347" cy="26" rx="5" ry="7" stroke="lightgrey" stroke-width=".5"/>
+     </svg>
+   </div>
+</body>
+<html>
