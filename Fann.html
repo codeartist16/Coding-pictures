@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Fan</title>
+</head>
+          <style type="text/css">
+              body {
+              	background: #6af5ff;
+              	}
+              .contain {
+              	margin-top: 50px;
+              	}
+              .drw {
+              	padding: 10px;
+              	background: #ff7455;
+              	width:270px;
+              	height: 270px;
+              	border: 5px groove blue;
+              	margin-top: 55px;
+              	margin-left: 7%;
+              	border-radius: 50%;
+              	text-align: center;
+              	transition: 1s linear border;
+              	}
+              .drw svg {
+              	margin-top: 13%;
+              	}
+              input[type="radio"] {
+              	display:none;
+              	}
+              label {
+              	background: blue;
+              	padding:10px;
+              	margin-left: 5px;
+              	border-radius: 5px;
+              	border: 3px outset dodgerblue;
+              	box-shadow: 2px 2px 5px black, -2px -2px 1px white;
+              	color: white;
+              	font-weight: 1000;
+              	font-variant: small-caps;
+              	}
+              input[id="fast"]:checked ~ label[for="fast"], input[id="normal"]:checked ~ label[for="normal"], input[id="slow"]:checked ~ label[for="slow"], input[id="stop"]:checked ~ label[for="stop"] {
+              	border: 2px solid black;
+              	box-shadow: none;
+              	}
+              input:checked ~ .drw {
+              	border: 5px groove grey;
+              	}
+              input[id="stop"]:checked ~ .drw{
+              	border: 5px groove blue;
+              	}
+              input[id="fast"]:checked ~ .drw svg {
+              	animation: speed .1s infinite forwards linear;
+              	}
+              input[id="normal"]:checked ~ .drw svg {
+              	animation: speed .5s infinite forwards linear;
+              	}
+              input[id="slow"]:checked ~ .drw svg {
+              	animation: speed 1s infinite forwards linear;
+              	}
+              @keyframes speed {
+              	to
+              	{transform: rotate(360deg);border-radius: 10%;}
+              	}
+          </style>
+<body>
+	<div class="contain">
+	 <input type="radio" id="fast" name="speed" />
+	 <label for="fast">fast</label>
+	 <input type="radio" id="normal" name="speed" />
+	 <label for="normal">normal</label>
+	 <input type="radio" id="slow" name="speed" />
+	 <label for="slow">slow</label>
+	 <input type="radio" id="stop" name="speed" />
+	 <label for="stop">stop</label><br />
+	 <div class="drw">
+	  <svg height="200" width="200">
+	   <path stroke="blue" fill="blue" d="M100 100,0 0,0 100,50 150z" />
+	   <path stroke="lime" fill="lime" d="M100 100,0 200,100 200,150 150z" />
+	   <path stroke="gold" fill="gold" d="M100 100,200 200,200 100,150 50z" />
+	   <path stroke="red" fill="red" d="M100 100,200 0,100 0,50 50z" />
+	   <circle cx="100" cy="100" r="5" stroke="#4d4d4d" stroke-width="5" fill="grey" />
+	  </svg>
+	 </div>
+	</div>			
+</body>
+</html>
